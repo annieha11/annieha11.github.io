@@ -1,9 +1,51 @@
-h1, p {
-	font-family: Arial;
-	color: #000;
+* {
+	margin: 0px;
+	padding: 0px;
+}
+body {
+	font-family: Helvetica, Arial, sans-serif;
 }
 
-body {
+header {
+	color: #fff;
 	text-align: center;
-	background-image: url("images/test.jpg");
+	  background: 
+    linear-gradient(
+      rgba(0, 0, 0, 0.4), 
+      rgba(0, 0, 0, 0.9)
+    ),
+    url(../images/hero2.jpg);
+    background-size: cover;
+}
+
+header p {
+	font-style: italic;
+	font-weight: 100;
+	font-size: 30px;
+	margin-top: 20px;
+}
+
+nav {
+	background-color: #000;
+	text-align: center;
+	padding: 30px;
+}
+
+nav a {
+	color: #ccc;
+	margin-right: 30px;
+	font-style: bold;
+	text-transform: uppercase;
+	text-decoration: none;
+}
+
+img {
+	width: 25%;
+}
+
+footer {
+	background: #000;
+	color: #ccc;
+	text-align: center;
+	padding: 20px;
 }
