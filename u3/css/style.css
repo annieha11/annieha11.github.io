@@ -1,24 +1,27 @@
 * {
-	margin: 0px;
-	padding: 0px;
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
 }
 body {
 	font-family: Helvetica, Arial, sans-serif;
 }
 
-header {
+#intro {
 	color: #fff;
 	text-align: center;
-	  background: 
+	background: 
     linear-gradient(
       rgba(0, 0, 0, 0.2), 
       rgba(0, 0, 0, 0.9)
     ),
     url(../images/hero2.jpg);
-    background-size: cover;
+	background-size: cover;
+	/* height: 95vh; */
+	padding: 10em 0;
 }
 
-header p {
+#intro p {
 	font-style: italic;
 	font-weight: 100;
 	font-size: 30px;
@@ -26,9 +29,10 @@ header p {
 }
 
 nav {
-	background-color: #000;
+	/* background-color: #000; */
 	text-align: center;
 	padding: 30px;
+	float: right;
 }
 
 nav a {
@@ -48,4 +52,16 @@ footer {
 	color: #ccc;
 	text-align: center;
 	padding: 20px;
+}
+header img {
+    width: 5em;
+    float: left;
+}
+.cta {
+    padding: 1em 2em;
+    background: purple;
+    color: #fff;
+    display: inline-block;
+    margin-top:1em;
+    text-decoration:none;
 }
