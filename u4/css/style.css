@@ -1,4 +1,13 @@
-@import url('https://fonts.googleapis.com/css?family=Roboto|Roboto+Slab');
+/*@import url('https://fonts.googleapis.com/css?family=Roboto|Roboto+Slab');
+COLOR PALETTE:
+
+Mustard: #B68817;
+Asphalt: #424244;
+Indigo: ; #2C424C;
+Licorice: #171615;
+
+*/
+@import url('https://fonts.googleapis.com/css?family=Roboto|Roboto+Slab:300');
 
 
 * {
@@ -8,10 +17,69 @@
 }
 body {
 	font-family: 'Roboto', Helvetica, Arial, sans-serif;
+	font-size: 16px;
+	line-height: 1.4em;
+	color: #424244;
+}
+
+p {
 }
 
 h1, h2, h3, h4, h5, h6 {
 	font-family: 'Roboto Slab', serif;
+	letter-spacing: 1px;
+	color: #2C424C;
+	padding: 1em 0;
+
+}
+
+a {
+	color: #B68817;
+	text-decoration: none;
+}
+
+img {
+	width: 25%;
+}
+
+nav {
+	/* background-color: #171615; */
+	text-align: center;
+	padding: 30px;
+	float: right;
+}
+
+footer {
+	background: #171615;
+	color: #ccc;
+	text-align: center;
+	padding: 20px;
+}
+
+nav a {
+	color: #fff;
+	margin-right: 30px;
+	font-family:'Roboto Slab', serif;
+	text-transform: uppercase;
+	text-decoration: none;
+	letter-spacing: 1px;
+	border-bottom: 2px solid #fff;
+	border-bottom-width: 2px;
+}
+
+header img {
+    width: 15em;
+    margin-top: 7.5px;
+    float: left;
+}
+
+.cta {
+    padding: 0.5em 1em;
+    background: #2C424C;
+    color: #fff;
+    display: inline-block;
+    margin-top:1em;
+    text-decoration:none;
 }
 
 #intro {
@@ -28,47 +96,63 @@ h1, h2, h3, h4, h5, h6 {
 	padding: 10em 0;
 }
 
-#intro p {
-	font-style: italic;
-	font-weight: 100;
-	font-size: 30px;
+#intro h2, footer h2 {
 	margin-top: 20px;
+	color: #fff;
 }
 
-nav {
-	/* background-color: #000; */
-	text-align: center;
-	padding: 30px;
-	float: right;
-}
-
-nav a {
-	color: #ccc;
-	margin-right: 30px;
-	font-style: bold;
-	text-transform: uppercase;
-	text-decoration: none;
-}
-
-img {
-	width: 25%;
-}
-
-footer {
-	background: #000;
-	color: #ccc;
-	text-align: center;
-	padding: 20px;
-}
-header img {
-    width: 5em;
-    float: left;
-}
-.cta {
+#intro .cta {
     padding: 1em 2em;
-    background: purple;
+    background: #B68817;
     color: #fff;
     display: inline-block;
     margin-top:1em;
     text-decoration:none;
+}
+
+
+#services section {
+	width: 20%;
+	margin: 2em auto;
+}
+
+#services img {
+	width: 50%;
+}
+
+#services h3 {
+}
+
+hr{
+	margin-bottom: 0.5em;
+	border: none;
+	height: 0.5em;
+	background-color: #B68817;
+	width: 1em;
+}
+
+.single_project div {
+	width: 50%;
+	background: #424244;
+	height: 200px;
+	color: #fff;
+	margin: 0;
+	padding: 2em auto; 
+}
+
+.single_project h3 {
+	color: #fff;
+}
+
+#projects img {
+	width: 50%;
+	margin: 0;
+}
+
+#P2, #P4 {
+		background: #2C424C;
+}
+
+#projects a h3 {
+	display: none;
 }

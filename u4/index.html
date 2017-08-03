@@ -1,12 +1,12 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title> Unit 3 Exercise for PALO ALTO</title>
+	<title>Unit 4 PALO ALTO</title>
 	<link rel="stylesheet" type="text/css" href="css/style.css">
 </head>
 <body>
 	<header> <!-- I'll explain how floats create this effect later - jh -->
-		<img src="images/logo_PA_white.png" alt="logo">
+		<img src="images/PaloAlto_horiz.svg" alt="PALOALTO bikes text">
 		<nav>
 			<a href="#">About</a>
 			<a href="#">Services</a>
@@ -16,8 +16,8 @@
 		</nav>
 	</header>
 	<section id="intro">
-		<img src="images/logo_PA_white.png" alt="Bold PALOALTO text followed by a bike icon" title="Paloalto bikeslogo">
-		<p id="slogan">In bikes we trust</p>
+		<img src="images/LOGO_web.svg" alt="Bold PALOALTO text followed by a bike icon" title="Paloalto bikeslogo">
+		<h2>In bikes we trust</h2>
 		<a href="#" class="cta">Order a bicycle</a>
 	</section>
 	<section id="services">
@@ -25,44 +25,85 @@
 		<section>
 			<img src="images/S1_recycling.png" alt="recycling sign" title="restoration icon">
 			<h3>Restoration</h3>
+			<hr>
 			<p>Why should you buy a new bike if you have an old one in garage? We can help you to re-cycle!</p>
-			<button>Discover</button>
+			<a href="#" class="cta">Discover</a>
 		</section>
 		<section>
 			<img src="images/S2_bike-icon.png" alt="bike that is changing color" title="personalisation icon">
 			<h3>Personalisation</h3>
+			<hr>
 			<p>Make your bike unique choosing colors and details. We paint frames and customize stickers.</p>
-			<button>Examples</button>
+			<a href="#" class="cta">Examples</a>
 		</section>
 		<section>
 			<img src="images/S3_repair.png" alt="bike broken that is fixed" title="Repair icon">
 			<h3>Repair &amp; Maintenance</h3>
-			<p>We are at your disposal for urgent issues or routinaries checks - eveything to make you ride your bike safely again.</p>
-			<button>Services</button>
+			<hr>
+			<p>We are at your disposal for urgent issues or routinaries checks - eveything to get your bike back in shape.</p>
+			<a href="#" class="cta">Services</a> <!-- Can this open a pop-up window?  -->
 		</section>
 	</section>
-	<section id="projects">
-		<h2>Top Sellers</h2>
-		<a href="#"> <!-- in this case the anchor can replace a div -->
-			<h3>Red German</h3>
-			<img src="images/red_german.jpg">
-		</a>
-		<h2>Baffucci</h2>
-		<img src="images/baffucci.jpg">
-		
-		<h2>Ghisallo restoration</h2>
-		<img src="images/bianchi.jpg">
 
-		<h2>Wilier restoration</h2>
-		<img src="images/wilier.jpg">
+	<section id="projects"> <!--I want to style this section in two different ways: only one needs the description paragraph and the title needs to be placed in two differenr sections - instead of building two html I've decided to play with display: none  -->
+		<h2>Past Projects</h2>
+		<section class="single_project">
+			<a href="#"> <!-- in this case the anchor can replace a div -->
+				<h3>Red German</h3> <!-- in the first option I'm going to hide this title -->
+				<img src="images/red_german.jpg" alt="" title="">
+			</a>
+			<div id="P1"> 
+				<h3>Red German</h3>
+				<hr>
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+				tempor incididunt ut labore et dolore magna aliqua.</p>
+			</div>
+		</section>
+		<section class="single_project">
+			<a href="#">
+				<h3>Baffucci</h3>
+				<img src="images/baffucci.jpg" alt="" title="">
+			</a>
+			<div id="P2"> 
+				<h3>Baffucci</h3>
+				<hr>
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+				tempor incididunt ut labore et dolore magna aliqua.</p>
+			</div>
+		</section>
+		<section class="single_project">
+			<a href="#">
+				<h3>Ghisallo restoration</h3>
+				<img src="images/bianchi.jpg" alt="" title="">
+			</a>
+			<div id="P3"> 
+				<h3>Ghisallo restoration</h3>
+				<hr>
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+				tempor incididunt ut labore et dolore magna aliqua.</p>
+			</div>
+		</section>
+		<section class="single_project">
+			<a href="#">
+				<h3>Wilier restoration</h3>
+				<img src="images/wilier.jpg" alt="" title="">
+			</a>	
+			<div id="P4"> 
+				<h3>Wilier restoration</h3>
+				<hr>
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+				tempor incididunt ut labore et dolore magna aliqua.</p>
+			</div>
+		</section>
 	</section>
+
 	<section>
-		<h2>Brands we like</h2>	
-		<img src="images/cinelli-logo.png" alt="Letter c with wings" title="Logo Cinelli">
-		<img src="images/columbus-logo.png">
-		<img src="images/campagnolo-logo.png">
-		<img src="images/selle-Smarco-logo.jpg">
-		<img src="images/fulcrum-logo.png">
+		<h2>Brands we like</h2>
+		<img src="images/cinelli-logo.png" alt="letter c with wings" title="Logo Cinelli">
+		<img src="images/columbus-logo.png" alt="white dove on a red background" title="Logo Columbus Tubing">>
+		<img src="images/campagnolo-logo.png" alt="campagnolo in italics" title="logo campagnolo">
+		<img src="images/selle-Smarco-logo.jpg" alt="text selle san marco with an italian flag" title="logo selle san marco">
+		<img src="images/fulcrum-logo.png" alt="ctext fulcrum" title="logo fulcrum">
 	</section>
 	<footer>
 		<h2>Contact</h2>	
