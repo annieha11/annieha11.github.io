@@ -33,6 +33,13 @@ h1, h2, h3, h4, h5, h6 {
 
 }
 
+h2 {
+/*	color: #B68817;*/
+	text-transform: uppercase;
+	text-align: center;
+	padding-top: 2em;
+}
+
 a {
 	color: #B68817;
 	text-decoration: none;
@@ -54,6 +61,12 @@ footer {
 	color: #ccc;
 	text-align: center;
 	padding: 20px;
+}
+
+footer hr{
+	margin: auto;
+	margin-bottom: 0.5em;
+
 }
 
 nav a {
@@ -96,10 +109,11 @@ header img {
 	padding: 10em 0;
 }
 
-#intro h2, footer h2 {
+#intro h1, footer h2 {
 	margin-top: 20px;
 	color: #fff;
 }
+
 
 #intro .cta {
     padding: 1em 2em;
@@ -131,21 +145,31 @@ hr{
 	width: 1em;
 }
 
+#projects {
+	background: #BEBDBD;
+}
+
 .single_project div {
-	width: 50%;
+	width: 40%;
 	background: #424244;
 	height: 200px;
 	color: #fff;
-	margin: 0;
-	padding: 2em auto; 
 }
 
 .single_project h3 {
 	color: #fff;
 }
 
+.single_project div * {
+	margin: 0 10%;
+}
+
+.single_project div hr {
+	margin-bottom: 0.5em;
+}
+
 #projects img {
-	width: 50%;
+	width: 40%;
 	margin: 0;
 }
 
@@ -155,4 +179,26 @@ hr{
 
 #projects a h3 {
 	display: none;
+}
+
+#brands, #brands h2 {
+	background: #424244;
+	color: #fff;
+}
+
+#brands img {
+	width: 15%
+}
+
+footer img {
+	width: 10em;
+	}
+
+footer h2 {
+		padding-top: 0.5em;
+}
+
+#cr {
+	color: #424244;
+	font-size: 14px;
 }
