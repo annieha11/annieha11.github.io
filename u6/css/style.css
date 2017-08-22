@@ -66,7 +66,7 @@ nav {
 	float: right;
 }
 
-.clearfix:after {
+.clearfix:after, .single_project:after {
   visibility: hidden;
   display: block;
   font-size: 0;
@@ -127,7 +127,7 @@ header img {
 
 /* Why the hover is not applied to all te .cta (also the the one in the intro at line 125)? */
 
-.cta:hover {
+.cta:hover, #intro .cta:hover {
     background: #424244;
     color: #fff;
 }
@@ -149,10 +149,6 @@ header img {
 #intro .cta {
     padding: 1em 2em;
     background: #B68817;
-    color: #fff;
-    display: inline-block;
-    margin-top:1em;
-    text-decoration:none;
 }
 
 #intro h1 {
@@ -167,9 +163,8 @@ header img {
 }
 
 #services div {
-	width: 280px;
-  	padding: 10px;
-  	margin: 0 10px;
+	width: 33.33%;
+	padding: 0 2em;
 	float: left;
 }
 
@@ -198,20 +193,24 @@ hr{
 .wrapper {
 	width:80%;
 	margin: auto;
-	background: purple;
+	/* background: purple; */
 }
 
 .single_project {
 	width:100%;
-	padding: 0 5%;
+	/* padding: 0 5%; */
+	background: #2C424C;
+	margin: 1em 0;
 }
-
+.single_project:nth-of-type(odd) {
+	background:#424244;
+}
 .single_project div {
-	width: 30%;
-  	padding: 30px;	
-  	background: #424244;
+	width: 33.33%;
+	padding: 30px;
+	background: #424244;
 	color: #fff;
-	float:left;
+	float: right;
 }
 
 .single_project h3 {
@@ -220,17 +219,16 @@ hr{
 
 
 .single_project img {
-	width: 60%;
+	width: 66.66%;
+	float: right;
+	border-left: 1em solid #bebdbd;
 }
 
 #P2, #P4 {
 		background: #2C424C;
 }
 
-#brands {
-background: #424244;
-padding: 2em 6em;
-}
+#brands {background: #424244;padding: 2em 6em;text-align: center;}
 
 #brands h2 {
 	color: #fff;
@@ -240,6 +238,7 @@ padding: 2em 6em;
 	height: 50px;
 	width: auto;
 	margin: 2em;
+	display: inline-block;
 }
 
 footer{
