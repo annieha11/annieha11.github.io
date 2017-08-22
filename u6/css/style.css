@@ -190,19 +190,24 @@ hr{
 }
 
 #projects {
-	width: 900px;
 	background: #BEBDBD;
 	clear: left;
 	padding: 2em 0;
-	margin: 0 auto;
+}
+
+.wrapper {
+	width:80%;
+	margin: auto;
+	background: purple;
 }
 
 .single_project {
+	width:100%;
+	padding: 0 5%;
 }
 
 .single_project div {
-	width: 300px;
-	height: 400px;
+	width: 30%;
   	padding: 30px;	
   	background: #424244;
 	color: #fff;
@@ -214,9 +219,8 @@ hr{
 }
 
 
-#projects img {
-	width: 600px;
-	margin: 0;
+.single_project img {
+	width: 60%;
 }
 
 #P2, #P4 {
