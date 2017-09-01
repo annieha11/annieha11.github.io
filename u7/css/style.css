@@ -1,4 +1,4 @@
-/*@import url('https://fonts.googleapis.com/css?family=Roboto|Roboto+Slab');
+/*@import url('https://fonts.googleapis.com/css?family=Roboto|Roboto+Slab:300,700');
 COLOR PALETTE:
 
 Mustard: #B68817;
@@ -7,7 +7,7 @@ Indigo: ; #2C424C;
 Licorice: #171615;
 
 */
-@import url('https://fonts.googleapis.com/css?family=Roboto|Roboto+Slab:300');
+@import url('https://fonts.googleapis.com/css?family=Raleway|Roboto|Roboto+Slab:300');
 
 
 * {
@@ -16,7 +16,7 @@ Licorice: #171615;
 	box-sizing: border-box;
 }
 body {
-	font-family: 'Roboto', Helvetica, Arial, sans-serif;
+	font-family: 'Raleway', Helvetica, Arial, sans-serif;
 	font-size: 16px;
 	line-height: 1.4em;
 	color: #424244;
@@ -28,9 +28,8 @@ p {
 h1, h2, h3, h4, h5, h6 {
 	font-family: 'Roboto Slab', serif;
 	letter-spacing: 1px;
-	color: #2C424C;
+	color: #424244;
 	padding-bottom: 1em;
-	font-weight: bold;
 }
 
 h1{
@@ -40,6 +39,8 @@ h1{
 
 h2 {
 /*	color: #B68817;*/
+	font-family: 'Raleway', serif;
+	font-weight: bold;
 	text-transform: uppercase;
 	text-align: center;
 	font-size: 1.5em;
@@ -91,19 +92,18 @@ footer hr{
 nav a {
 	color: #fff;
 	margin-right: 40px;
-	font-family:'Roboto Slab', serif;
+	font-family:'Raleway', sans-serif;
 	text-transform: uppercase;
 	text-decoration: none;
 	letter-spacing: 1px;
-	border-bottom: 2px solid #fff;
+/*	border-bottom: 2px solid #fff;
 	padding: 5px 10px; 
-/*	display: block; --> for vertical navigation */
+/* 	display: block; --> for vertical navigation */
 }
 
 nav a:hover {
-	background-color: #B68817;
-	border-bottom: 2px solid #B68817;
-	border-top: 2px solid #B68817;
+/*	background-color: #171615; */
+	border-bottom: 3px solid #fff;
 }
 
 
@@ -113,23 +113,24 @@ header img {
     float: left;
 }
 
+
+/* How to center the cta button*/
 .cta {
     padding: 0.5em 1em;
-    background: #2C424C;
+    background: #424244;
     color: #fff;
     display: inline-block;
     margin-top: 1em;
     margin-bottom: 2em;
     text-decoration: none;
     text-align: center;
-
+    border: 1px solid;
 }
 
-/* Why the hover is not applied to all te .cta (also the the one in the intro at line 125)? */
-
 .cta:hover, #intro .cta:hover {
-    background: #424244;
+    background: #B68817;
     color: #fff;
+    border: 1px solid #fff;
 }
 
 #intro {
@@ -148,21 +149,21 @@ header img {
 
 #intro .cta {
     padding: 1em 2em;
-    background: #B68817;
+    background: #171615;
 }
 
 #intro h1 {
 	margin-top: 20px;
 	color: #fff;
 }
-  
+ 
+
+
 #services {
-	width: 900px;
-	margin: 0 auto;
 	padding: 2em 0;
 }
 
-#services div {
+#services .wrapper div {
 	width: 33.33%;
 	padding: 0 2em;
 	float: left;
@@ -191,27 +192,27 @@ hr{
 }
 
 .wrapper {
-	width:80%;
+	width:70%;
 	margin: auto;
-	/* background: purple; */
 }
 
 .single_project {
 	width:100%;
-	/* padding: 0 5%; */
-	background: #2C424C;
+	background: #424244;
 	margin: 1em 0;
 }
-.single_project:nth-of-type(odd) {
-	background:#424244;
-}
+
 .single_project div {
 	width: 33.33%;
 	padding: 30px;
-	background: #424244;
 	color: #fff;
-	float: right;
+	float: left;
 }
+
+.single_project:nth-of-type(odd) {
+	background:#171615;
+}
+
 
 .single_project h3 {
 	color: #fff;
@@ -220,15 +221,12 @@ hr{
 
 .single_project img {
 	width: 66.66%;
-	float: right;
-	border-left: 1em solid #bebdbd;
+	float: left;
+/*		padding: 0.5em;
+/*	border-left: 0em solid #bebdbd; */
 }
 
-#P2, #P4 {
-		background: #2C424C;
-}
-
-#brands {background: #424244;padding: 2em 6em;text-align: center;}
+#brands {background: #424244; padding: 2em 6em;text-align: center;}
 
 #brands h2 {
 	color: #fff;
