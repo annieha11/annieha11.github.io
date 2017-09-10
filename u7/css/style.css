@@ -63,7 +63,7 @@ img {
 nav {
 	/* background-color: #171615; */
 	text-align: center;
-	padding: 2em;
+	padding: 30px;
 	float: right;
 }
 
@@ -80,7 +80,7 @@ footer {
 	background: #171615;
 	color: #ccc;
 	text-align: center;
-	padding: 1.5em;
+	padding: 20px;
 }
 
 footer hr{
@@ -91,7 +91,7 @@ footer hr{
 
 nav a {
 	color: #fff;
-	margin-right: 2.5em;
+	margin-right: 40px;
 	font-family:'Raleway', sans-serif;
 	text-transform: uppercase;
 	text-decoration: none;
@@ -109,17 +109,19 @@ nav a:hover {
 
 header img {
     width: 15em;
-    margin-top: 0.5em;
+    margin-top: 7.5px;
     float: left;
 }
 
+
+/* How to center the cta button*/
 .cta {
     padding: 0.5em 1em;
     background: #424244;
     color: #fff;
     display: inline-block;
     margin-top: 1em;
-    margin-bottom: 1em;
+    margin-bottom: 2em;
     text-decoration: none;
     text-align: center;
     border: 1px solid;
@@ -141,7 +143,7 @@ header img {
     ),
     url(../images/hero2.jpg);
 	background-size: cover;
-	/*height: 95vh;*/
+	/* height: 95vh; */
 	padding: 10em 0;
 }
 
@@ -151,13 +153,10 @@ header img {
 }
 
 #intro h1 {
-	margin-top: 1.5em;
+	margin-top: 20px;
 	color: #fff;
 }
-
-#intro img {
-	min-width: 18em;
-}
+ 
 
 
 #services {
@@ -198,11 +197,9 @@ hr{
 }
 
 .single_project {
-	width: 100%;
-	max-width: 900px;
-	min-width: 777px;
+	width:100%;
 	background: #424244;
-	margin: 0 auto 1em;
+	margin: 1em 0;
 }
 
 .single_project div {
@@ -259,94 +256,4 @@ footer img {
 #cr {
 	color: #424244;
 	font-size: 14px;
-}
-
-
-@media only screen and (max-width: 970px) {
-
-header img {
-    display: none;
-}
-
-
-/* How to make it float on the background?*/
-nav {
-float: none;
-background-color: #171615;
-}
-
-#intro {
-	height: 95vh;
-	padding: 3em 0;
-}
-
-.wrapper {
-	width: 90%;
-	margin: auto;
-}
-
-.single_project {
- min-width: 20px;
- width: 100%;
-}
-
-.single_project div{
-	padding: 1em;
-}
-
-.single_project img{
-	padding: 1em;
-}
-
-}
-
-@media only screen and (max-width: 670px) {
-
-nav a {
-text-align: center;
-display: block; 
-padding: 0.3em; 
-margin: 0 auto;
-}
-
-nav a:hover {
-background-color: #B68817;
-border-bottom: 0px;
-}
-
-.wrapper {
-	width: 90%;
-	margin: auto;
-}
-
-#services .wrapper div {
-	float: none;
-	width: 100%; 
-	text-align: center;
-	margin: 0 auto 3em;
-}
-
-#services .wrapper hr {
-	text-align: center;
-	display: none;
-}
-
-.single_project {
- min-width: 20px;
- width: 100%;
-}
-
-.single_project img {
- width: 100%;
- padding: 0 0 1em;
-}
-
-.single_project div{
-	float: none;
-	width: 100%;
-	padding: 1.5em;
-}
-
-.single_project .cta {
-float: right;
 }
