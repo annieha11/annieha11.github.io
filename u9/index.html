@@ -1,21 +1,30 @@
 <!DOCTYPE html>
 <html>
 <head>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>PALO ALTO bikes</title>
+	<meta charset="UTF-8">
 	<link rel="stylesheet" type="text/css" href="css/style.css">
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 	<script src="/js/my.js"></script>
+	<!--[if lt IE 9]>
+            <script src="bower_components/html5shiv/dist/html5shiv.js"></script>
+        <![endif]-->
 </head>
 <body>
-	<header> <!-- I'll explain how floats create this effect later - jh -->
+	<header> 
 		<img src="images/PaloAlto_horiz.svg" alt="PALOALTO bikes text">
 		<nav>
-			<a href="#">About</a>
-			<a href="#">Services</a>
-			<a href="#">Projects</a>
-			<a href="#">Journal</a>
-			<a href="#">Contact</a>
+			<label for="toggle">Menu</label>
+    	    <input type="checkbox" id="toggle">
+    	    <div class="hide">
+				<a href="#">About</a>
+				<a href="#">Services</a>
+				<a href="#">Projects</a>
+				<a href="#">Journal</a>
+				<a href="#">Contact</a>
+			</div>
 		</nav>
 	</header>
 	<section id="intro">

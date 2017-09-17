@@ -76,6 +76,13 @@ nav {
 	float: right;
 }
 
+label {
+	display: none;
+}
+
+#toggle {
+	display: none;
+}
 
 .fixed {
 	position: fixed;
@@ -91,6 +98,11 @@ nav a {
 	text-transform: uppercase;
 	text-decoration: none;
 	letter-spacing: 1px;
+	-webkit-transition:border-bottom ease-in-out .1s;
+	-moz-transition:border-bottom ease-in-out .1s;
+	-o-transition:border-bottom ease-in-out .1s;
+	transition:border-bottom ease-in-out .1s;
+
 /*	border-bottom: 2px solid #fff;
 	padding: 5px 10px; 
 /* 	display: block; --> for vertical navigation */
@@ -285,8 +297,6 @@ header img {
     display: none;
 }
 
-
-/* How to make it float on the background?*/
 nav {
 float: none;
 background-color: #171615;
@@ -319,6 +329,23 @@ background-color: #171615;
 
 @media only screen and (max-width: 670px) {
 
+label {
+	color: #fff;
+	font-family:'Raleway', sans-serif;
+	text-transform: uppercase;
+	letter-spacing: 1px;
+	width: 10em;
+	text-align: center;
+	padding: 0.8em; 
+	margin: 0 auto;
+	display: block;
+	cursor: pointer;
+}
+
+label:hover {
+background-color: #B68817;
+}
+
 nav a {
 width: 10em;
 text-align: center;
@@ -331,6 +358,19 @@ nav a:hover {
 background-color: #B68817;
 border-bottom: 0px;
 }
+
+.hide{
+	display: none;
+}
+
+#toggle:checked + .hide {
+	display: block;
+}
+
+/* NOT WORKING --- WHY?
+#toggle:checked ~ label {
+	color: #B68817;
+}*/
 
 .wrapper {
 	width: 90%;
@@ -366,12 +406,11 @@ border-bottom: 0px;
 }
 
 .single_project .cta {
-float: right;
+	float: right;
 }
 
 #brands img {
-width: 48%;
-}
-
+	width: 48%;
+}	
 
 }
