@@ -1,0 +1,352 @@
+/*@import url('https://fonts.googleapis.com/css?family=Roboto|Roboto+Slab:300,700');
+COLOR PALETTE:
+
+Mustard: #B68817;
+Asphalt: #424244;
+Indigo: ; #2C424C;
+Licorice: #171615;
+
+*/
+@import url('https://fonts.googleapis.com/css?family=Raleway|Roboto|Roboto+Slab:300');
+
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+body {
+	font-family: 'Raleway', Helvetica, Arial, sans-serif;
+	font-size: 16px;
+	line-height: 1.4em;
+	color: #424244;
+}
+
+p {
+}
+
+h1, h2, h3, h4, h5, h6 {
+	font-family: 'Roboto Slab', serif;
+	letter-spacing: 1px;
+	color: #424244;
+	padding-bottom: 1em;
+}
+
+h1{
+	text-align: center;
+	font-size: 2em;
+}
+
+h2 {
+/*	color: #B68817;*/
+	font-family: 'Raleway', serif;
+	font-weight: bold;
+	text-transform: uppercase;
+	text-align: center;
+	font-size: 1.5em;
+}
+
+h3 {
+	font-size: 1.2em;
+}
+
+
+a {
+	color: #B68817;
+	text-decoration: none;
+}
+
+img {
+	width: 25%;
+}
+
+nav {
+	/* background-color: #171615; */
+	text-align: center;
+	padding: 2em;
+	float: right;
+}
+
+.clearfix:after, .single_project:after {
+  visibility: hidden;
+  display: block;
+  font-size: 0;
+  content: " ";
+  clear: both;
+  height: 0;
+}
+
+footer {
+	background: #171615;
+	color: #ccc;
+	text-align: center;
+	padding: 1.5em;
+}
+
+footer hr{
+	margin: auto;
+	margin-bottom: 0.5em;
+
+}
+
+nav a {
+	color: #fff;
+	margin-right: 2.5em;
+	font-family:'Raleway', sans-serif;
+	text-transform: uppercase;
+	text-decoration: none;
+	letter-spacing: 1px;
+/*	border-bottom: 2px solid #fff;
+	padding: 5px 10px; 
+/* 	display: block; --> for vertical navigation */
+}
+
+nav a:hover {
+/*	background-color: #171615; */
+	border-bottom: 3px solid #fff;
+}
+
+
+header img {
+    width: 15em;
+    margin-top: 0.5em;
+    float: left;
+}
+
+.cta {
+    padding: 0.5em 1em;
+    background: #424244;
+    color: #fff;
+    display: inline-block;
+    margin-top: 1em;
+    margin-bottom: 1em;
+    text-decoration: none;
+    text-align: center;
+    border: 1px solid;
+}
+
+.cta:hover, #intro .cta:hover {
+    background: #B68817;
+    color: #fff;
+    border: 1px solid #fff;
+}
+
+#intro {
+	color: #fff;
+	text-align: center;
+	background: 
+    linear-gradient(
+      rgba(0, 0, 0, 0.2), 
+      rgba(0, 0, 0, 0.9)
+    ),
+    url(../images/hero2.jpg);
+	background-size: cover;
+	/*height: 95vh;*/
+	padding: 10em 0;
+}
+
+#intro .cta {
+    padding: 1em 2em;
+    background: #171615;
+}
+
+#intro h1 {
+	margin-top: 1.5em;
+	color: #fff;
+}
+
+#intro img {
+	min-width: 18em;
+}
+
+
+#services {
+	padding: 2em 0;
+}
+
+#services .wrapper div {
+	width: 33.33%;
+	padding: 0 2em;
+	float: left;
+}
+
+#services img {
+	height: 100px;
+	width: auto;
+}
+
+#services h3 {
+}
+
+hr{
+	margin-bottom: 0.5em;
+	border: none;
+	height: 0.5em;
+	background-color: #B68817;
+	width: 1em;
+}
+
+#projects {
+	background: #BEBDBD;
+	clear: left;
+	padding: 2em 0;
+}
+
+.wrapper {
+	width:70%;
+	margin: auto;
+}
+
+.single_project {
+	width: 100%;
+	max-width: 900px;
+	min-width: 777px;
+	background: #424244;
+	margin: 0 auto 1em;
+}
+
+.single_project div {
+	width: 33.33%;
+	padding: 30px;
+	color: #fff;
+	float: left;
+}
+
+.single_project:nth-of-type(odd) {
+	background:#171615;
+}
+
+
+.single_project h3 {
+	color: #fff;
+}
+
+
+.single_project img {
+	width: 66.66%;
+	float: left;
+/*		padding: 0.5em;
+/*	border-left: 0em solid #bebdbd; */
+}
+
+#brands {background: #424244; padding: 2em 6em;text-align: center;}
+
+#brands h2 {
+	color: #fff;
+}
+
+#brands img {
+	height: 50px;
+	width: auto;
+	margin: 2em;
+	display: inline-block;
+}
+
+footer{
+	padding: 1em;
+}
+
+footer h3 {
+	color: #fff;
+	text-transform: uppercase;
+}
+
+footer img {
+	width: 10em;
+	}
+
+
+#cr {
+	color: #424244;
+	font-size: 14px;
+}
+
+
+@media only screen and (max-width: 970px) {
+
+header img {
+    display: none;
+}
+
+
+/* How to make it float on the background?*/
+nav {
+float: none;
+background-color: #171615;
+}
+
+#intro {
+	height: 95vh;
+	padding: 3em 0;
+}
+
+.wrapper {
+	width: 90%;
+	margin: auto;
+}
+
+.single_project {
+ min-width: 20px;
+ width: 100%;
+}
+
+.single_project div{
+	padding: 1em;
+}
+
+.single_project img{
+	padding: 1em;
+}
+
+}
+
+@media only screen and (max-width: 670px) {
+
+nav a {
+text-align: center;
+display: block; 
+padding: 0.3em; 
+margin: 0 auto;
+}
+
+nav a:hover {
+background-color: #B68817;
+border-bottom: 0px;
+}
+
+.wrapper {
+	width: 90%;
+	margin: auto;
+}
+
+#services .wrapper div {
+	float: none;
+	width: 100%; 
+	text-align: center;
+	margin: 0 auto 3em;
+}
+
+#services .wrapper hr {
+	text-align: center;
+	display: none;
+}
+
+.single_project {
+ min-width: 20px;
+ width: 100%;
+}
+
+.single_project img {
+ width: 100%;
+ padding: 0 0 1em;
+}
+
+.single_project div{
+	float: none;
+	width: 100%;
+	padding: 1.5em;
+}
+
+.single_project .cta {
+float: right;
+}
