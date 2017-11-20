@@ -110,10 +110,10 @@ header img {
 	color: #ebebeb;
 	text-align: center;
 	background: 
-    url(../img/Img_scicomm.svg);
+    url(../img/Img_scicomm2.svg);
 	background-size: 100%;
 	background-repeat: no-repeat;
-	height: calc(100vw * 0.5625);
+	height: calc(100vw * 0.5);
 	padding: 10em 0;
 }
 
