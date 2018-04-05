@@ -1,0 +1,132 @@
+@import url('https://fonts.googleapis.com/css?family=Merriweather:300|Merriweather+Sans:700');
+
+/*COLOR PALETTE:
+
+Blu: #071443;
+Orange: #ff613f;
+Light-Gray: ; #ebebeb;
+Cobalt-gray-dark: #70888c;
+Cobalt-gray-light: #94a8ab;
+
+*/
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+body {
+	font-family: 'Merriweather', serif;
+	font-size: 16px;
+	line-height: 1.4em;
+	color: #071443;
+}
+
+p {
+}
+
+h1, h2, h3, h4, h5, h6 {
+	font-family: 'Merriweather Sans', sans-serif;
+	letter-spacing: 0.5px;
+	color: #ff613f;
+	padding-bottom: 1em;
+}
+
+h1{
+	font-size: 2.5em;
+	color: #071443;
+	margin: 0.5em;
+	text-align: center;
+}
+
+h2 {
+	text-transform: uppercase;
+	text-align: center;
+	font-size: 1.5em;
+	margin: 1.5em;
+}
+
+h3 {
+	font-size: 1.2em;
+}
+
+a {
+	color: #ff613f;
+	text-decoration: none;
+}
+
+header {
+	color: #ebebeb;
+	text-align: center;
+	background: 
+    url(../img/toms-restaurant.jpg);
+	background-size: 100%;
+	background-repeat: no-repeat;
+	height: calc(100vw * 0.5);
+	padding: 10em 0;}
+
+header h1, header h2 {
+	color: #ff613f;
+	}
+
+.clearfix:after, .single_project:after {
+  visibility: hidden;
+  display: block;
+  font-size: 0;
+  content: " ";
+  clear: both;
+  height: 0;
+}
+
+button {
+    padding: 0.8em 1em;
+    color: #ff613f;
+    display: inline-block;
+    margin-top: 3em;
+    margin-bottom: 1em;
+    font-family:'Merriweather Sans', sans-serif;
+    text-decoration: none;
+    text-transform: uppercase;
+    text-align: center;
+    border: 1px solid;
+    border-radius: 10px;
+}
+
+button:hover {
+    background: #ff613f;
+    color: #ebebeb;
+    border: 1px solid #ebebeb;
+}
+
+#reservations, #reviews {
+    background: #071443;
+    color: #ebebeb;
+    padding: 3em 6em;
+}
+
+.column {
+	width: 50%;
+	float: left;
+	}
+
+.column img {
+	width: 80%;
+	}
+
+form {
+	width: 80%;
+	}
+
+form input {
+	width: 49%;
+	/*height: 1.5em;
+	line-height: 1.5em;*/
+	}
+
+form button {
+	width: 100%;
+	}
+
+ #map {
+    height: 20em;
+  }

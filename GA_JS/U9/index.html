@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Monk’s Cafe</title>
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+</head>
+<body>
+
+	<header>
+		<h1>Monk’s Cafe</h1>
+		<h2>“The Coffee Shop”</h2>
+	</header>
+
+	<section id="reservations" class="clearfix">
+		<h2>Reservations</h2>
+
+			<div class="column">
+				<h3>Make a Reservation</h3>
+				<form>
+		    		<input type="Name" placeholder="Your Name">
+		    		<input type="Day" placeholder="DD/MM/YY">
+		    		<button>Confirm</button>
+				</form>
+			</div>
+
+			<div class="column">
+				<h3>Existing Reservations</h3>
+				
+				<table>
+					<thead>
+						<th>Name</th>
+						<th>Day</th>
+					</thead>
+					<tbody> [ form data will publish here ] </tbody>
+				</table>
+			
+			</div>
+
+	</section>
+
+	<section>
+		<h2>Come Dine with Us</h2>
+		<div id="map"></div>
+	</section>
+
+	<section id="reviews" class="clearfix">
+		<h2>Customer Reviews</h2>	
+		<div class="column"> <img src="img/jerry.jpg" title="Jerry at the restaurant" alt="Two man dining and talking"></div>
+		<div class="column"> <p>“Big lettuce, big carrots, tomatoes like volleyballs.” — Jerry Seinfeld, on The BIG Salad</p> </div>
+	</section>
+  
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBNQa0pZeD6A6BH9YEr4bkQ6EKjaePMyV4&callback=initMap" async defer></script>
+  <script src="js/main.js"></script>
+</body>
+</html>
