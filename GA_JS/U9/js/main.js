@@ -1,3 +1,9 @@
+
+
+////////////////////
+// GOOGLE MAP API //
+///////////////////
+
 var map;
 
 var styles = [
@@ -13,7 +19,7 @@ var styles = [
 	}
 	]
 
-// How to change the MARKER COLOR?
+// How to change the THE MARKER color ?
 
 function initMap() {
 map = new google.maps.Map(document.getElementById('map'), {
@@ -29,3 +35,61 @@ var Marker = new google.maps.Marker({
 	});
 
 }
+////////////////
+// INPUT FORM //
+///////////////
+
+// How to change the text size in the input form?
+// How to prevent the default focus  to highlight in light-blue?
+// How to change the color of the placeholder text?
+
+$('input').on('focus blur', function borderFocus(e) {
+	e.preventDefault();
+	$(this).toggleClass('input-focus');
+});
+
+$('.dropdown button').on('click', function showMenu(e) {
+	e.preventDefault();
+	$('.dropdown-content').toggleClass('show');
+
+});
+
+
+//////////////////////////
+// RESERVATION DATABASE //
+/////////////////////////
+
+//Can you make a database write on a google sheet or a user-friendly doc?
+
+ // Initialize and connect Firebase (remember to update the rules if needed)
+ var config = {
+   apiKey: "AIzaSyArw2K_Js09RtxqaxEYAjdZt_KknHpyxHg",
+   authDomain: "reservation-site-d0577.firebaseapp.com",
+   databaseURL: "https://reservation-site-d0577.firebaseio.com",
+   projectId: "reservation-site-d0577",
+   storageBucket: "reservation-site-d0577.appspot.com",
+   messagingSenderId: "138304556817"
+ };
+
+ firebase.initializeApp(config);
+ var database = firebase.database();
+
+ // Store Reservations
+
+var reservationData = { };
+
+// add a click event to each of your reservation options, ‘.reservation-day a. 
+
+$('.dropdown-content a').on('click', function selectDay(e) {
+		e.preventDefault(); 
+		var day = $(this).text();
+		$('.dropdown-content').removeClass('show');
+		//console.log(day);
+	});
+
+
+
+
+
+
+

@@ -7,8 +7,8 @@
 <body>
 
 	<header>
-		<h1>Monk’s Cafe</h1>
-		<h2>“The Coffee Shop”</h2>
+		<h1><span>Monk’s Cafe</span></h1>
+		<h2><span>“The Coffee Shop”</span></h2>
 	</header>
 
 	<section id="reservations" class="clearfix">
@@ -18,7 +18,15 @@
 				<h3>Make a Reservation</h3>
 				<form>
 		    		<input type="Name" placeholder="Your Name">
-		    		<input type="Day" placeholder="DD/MM/YY">
+		    		<!-- <input type="Day" placeholder="DD/MM/YY"> -->
+		    		<div class="dropdown">
+					<button class="dropbtn">Select a Day</button>
+						<div id="myDropdown" class="dropdown-content">
+							    <a>Today</a>
+							    <a>Tomorrow</a>
+							    <a>The day after next</a>
+						</div>
+					</div>
 		    		<button>Confirm</button>
 				</form>
 			</div>
@@ -38,7 +46,7 @@
 
 	</section>
 
-	<section>
+	<section id="map-section">
 		<h2>Come Dine with Us</h2>
 		<div id="map"></div>
 	</section>
@@ -50,6 +58,7 @@
 	</section>
   
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/4.12.1/firebase.js"></script>
   <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBNQa0pZeD6A6BH9YEr4bkQ6EKjaePMyV4&callback=initMap" async defer></script>
   <script src="js/main.js"></script>
 </body>
