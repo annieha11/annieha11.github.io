@@ -2,7 +2,9 @@
 <html>
 <head>
 	<title>Monk’s Cafe</title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css">
 	<link rel="stylesheet" type="text/css" href="css/style.css">
+
 </head>
 <body>
 
@@ -36,10 +38,21 @@
 				
 				<table>
 					<thead>
+					<tr>
 						<th>Name</th>
 						<th>Day</th>
+						<th></th>
+					</tr>
 					</thead>
-					<tbody> [ form data will publish here ] </tbody>
+					<tbody>
+					<script id="entry-template" type="text/x-handlebars-template">
+						<tr data-id="{{reservationId}}">
+						<td>{{name}}</td>
+						<td>{{day}}</td>
+						<td><i class="fa fa-trash-o delete"></i></td>
+						</tr>
+					</script>
+					</tbody>
 				</table>
 			
 			</div>
@@ -48,6 +61,8 @@
 
 	<section id="map-section">
 		<h2>Come Dine with Us</h2>
+		<p>Hours: Tue-Sun 18.00 - 01:00</p>
+		<p id="time-status"><p>
 		<div id="map"></div>
 	</section>
 
@@ -58,6 +73,7 @@
 	</section>
   
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="js/handlebars-v4.0.5.js"></script>
   <script src="https://www.gstatic.com/firebasejs/4.12.1/firebase.js"></script>
   <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBNQa0pZeD6A6BH9YEr4bkQ6EKjaePMyV4&callback=initMap" async defer></script>
   <script src="js/main.js"></script>

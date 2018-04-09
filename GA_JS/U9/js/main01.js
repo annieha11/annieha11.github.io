@@ -35,29 +35,6 @@ var Marker = new google.maps.Marker({
 	});
 
 }
-
-
-/////////
-//TIME///
-////////
-
-
-var now = new Date(Date.now());
-var timeFormatted = now.getHours() + ":" + now.getMinutes() + ":" + now.getSeconds();
-
-var dNow = new Date();
-var today = (dNow.getMonth()+ 1) + '/' + dNow.getDate() + '/' + dNow.getFullYear();
-var tomorrow = (dNow.getMonth()+ 2) + '/' + dNow.getDate() + '/' + dNow.getFullYear();
-var dayAfter = (dNow.getMonth()+ 3) + '/' + dNow.getDate() + '/' + dNow.getFullYear();
-
-var weekDay = ["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"][(new Date()).getDay()];
-
-if ((weekDay == "Monday") || (now.getHours()<18) && (now.getHours()>=1)) { 
-	$('#time-status').text("Now closed!");
-	} else { $('#time-status').text("Now open!");
-}
-
-
 ////////////////
 // INPUT FORM //
 ///////////////
@@ -79,7 +56,7 @@ $('.dropdown button').on('click', function showMenu(e) {
 
 
 //////////////////////////
-// INITIALIZE DATABASE //
+// RESERVATION DATABASE //
 /////////////////////////
 
 //Can you make a database write on a google sheet or a user-friendly doc?
@@ -96,49 +73,6 @@ $('.dropdown button').on('click', function showMenu(e) {
 
  firebase.initializeApp(config);
  var database = firebase.database();
-// create a section for the data in your db
- var reservationsReference = database.ref('reservations');
-
-
-///////////////////////
-// RETRIEVE DATABASE //
-//////////////////////
-
-var source = $("#entry-template").html();
-var template = Handlebars.compile(source);
-
-// Step 1: Create a function that queries our database for reservations
-function getReservations() {
-  // Listen for changes in data
-  reservationsReference.on('value', function (results) {
-    // Get all reservations stored in the results we received back from Firebase    
-    var allReservations = results.val();
-    // Set an empty array where we can add all reservations
-    var reservations = [];
-    // iterate (loop) through all reservations from Firebase
-    for (var item in allReservations) {
-      // Create an object literal with the data we'll pass to Handlebars
-      var context = {
-        name: allReservations[item].name,
-        day: allReservations[item].day,
-        reservationId: item
-      };
-	
-	var newTableRowHTML = template(context);
-	//$('tbody').prepend(newTableRowHTML);
-    reservations.push(newTableRowHTML);
-    }
-    // remove all list items from DOM before appending list items
-    $('tbody').empty();
-    // append each comment to the list of comments in the DOM
-    for (var i in reservations) {
-    $('tbody').prepend(reservations[i]);
-    }
-  });
-}
-getReservations();
-
-
 
 //////////////////////
 // FORM SUBMISSION //
@@ -152,13 +86,7 @@ $('.dropdown-content a').on('click', function selectDay(e) {
 		e.preventDefault(); 
 		day = $(this).text();
 		$('.dropdown-content').removeClass('show');
-		
-		if (day == 'Tomorrow') { reservationData.day = tomorrow;
-		} else if (day == 'Today') { reservationData.day = today;
-		} else if (day == 'The day after next') { reservationData.day = dayAfter;
-		}
-		
-		//reservationData.day = day;
+		reservationData.day = day;
 		$('.dropbtn').text(day);
 //		console.log(reservationData.day);
 	});
@@ -174,12 +102,18 @@ $('form').on('submit', function submitForm(e) {
 		// clear the user's inputs
 		  $('input').val('');
 		  $('.dropbtn').text('Select a day');
-
+		  // create a section for the data in your db
+		  var reservationsReference = database.ref('reservations');
+		  // use the set method to save data to the comments
 		  reservationsReference.push({
 		    name: reservationData.name,
 		    day: reservationData.day
   			});
 
+		var source = $("#entry-template").html();
+		var template = Handlebars.compile(source);
+		var newTableRowHTML = template(reservationData);
+		$('tbody').append(newTableRowHTML);
 		reservationData = { };
 
 
@@ -210,7 +144,10 @@ function checkEmailInput() {
 ////////////////////////
 
 $('tbody').on('click', '.delete', function(e){ 
-	var id = $(this).closest('tr').data('id');
 	$(this).closest('tr').remove();
-    database.ref('reservations/' + id).remove();
+
+
 });
+
+
+
