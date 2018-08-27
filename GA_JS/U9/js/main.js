@@ -42,8 +42,8 @@ var Marker = new google.maps.Marker({
 ////////
 
 
-var now = new Date(Date.now());
-var timeFormatted = now.getHours() + ":" + now.getMinutes() + ":" + now.getSeconds();
+var now = new Date(Date.now());  // universal time
+var timeFormatted = now.getHours() + ":" + now.getMinutes() + ":" + now.getSeconds(); //momentJS // moment-timezone.js
 
 var dNow = new Date();
 var today = (dNow.getMonth()+ 1) + '/' + dNow.getDate() + '/' + dNow.getFullYear();
@@ -214,3 +214,71 @@ $('tbody').on('click', '.delete', function(e){
 	$(this).closest('tr').remove();
     database.ref('reservations/' + id).remove();
 });
+
+
+/////////////////////
+// RATINGS FROM FB //
+/////////////////////
+
+window.fbAsyncInit = function() {
+    FB.init({
+      appId            : '437191003405935',
+      autoLogAppEvents : true,
+      xfbml            : true,
+      version          : 'v2.12'
+    });
+  };
+
+  (function(d, s, id){
+     var js, fjs = d.getElementsByTagName(s)[0];
+     if (d.getElementById(id)) {return;}
+     js = d.createElement(s); js.id = id;
+     js.src = "https://connect.facebook.net/en_US/sdk.js";
+     fjs.parentNode.insertBefore(js, fjs);
+   }(document, 'script', 'facebook-jssdk'));
+
+/* make the API call */
+
+FB.api('/113124472034820', function(response) {
+  console.log(response);
+});
+
+FB.api("PaloAltoBikes/reviews/",
+    function (response) {
+      if (response && !response.error) {
+        /* handle the result */
+      }
+    }
+);
+
+
+function wp_get_shares( $post_id ) {
+//	$access_token = '&access_token=437191003405935|07d7ec3870b686982846eccdd1a5a651';
+	// 07d7ec3870b686982846eccdd1a5a651
+	//437191003405935
+$response = wp_remote_get('https://graph.facebook.com/v2.7/?id=' . urlencode( get_permalink( $post_id ) ) . '&access_token=' . $access_token );
+$body = json_decode( $response['body'] );
+		//print_r($body);
+ 
+		//$count = intval( $body->share->share_count );
+		//set_transient( $cache_key, $count, 3600 ); // store value in cache for a 1 hour
+	}
+	return $count;
+}
+
+//var makeTextFile = function(text) {
+//var data = new Blob([text], {type: 'text/plain'});
+//if(textFile !== null) window.URL.revokeObjectURL(textFile);
+//textFile = window.URL.createObjectURL(data);
+//return textFile;
+//}
+
+////
+//  familiar enough  JUNIOR POSITION - vanilla JS, jquery, html, css
+//  ANIMATED SVG
+//  API
+////
+
+// Instagram -
+
+

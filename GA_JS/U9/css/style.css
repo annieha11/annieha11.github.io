@@ -190,6 +190,10 @@ input, .dropdown button {
     border: solid #ff613f;
 	}
 
+button:focus, input:focus, button:active:focus, input:active:focus {  
+outline: none;
+ }
+
 form button {
 	width: 100%;
 	}
@@ -202,4 +206,8 @@ th, td {
 th {
 	text-transform: uppercase;
 	text-align: left;
+}
+
+::placeholder {
+color: red;
 }
