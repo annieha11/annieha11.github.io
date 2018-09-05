@@ -1,0 +1,90 @@
+@import url('https://fonts.googleapis.com/css?family=Hammersmith+One|Open+Sans|Voltaire');
+
+/*dark-blue 1D4198
+blue  2656CA
+acid-yellow D9EC89 */
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+body {
+	width: 80%;
+	margin: auto;
+	font-family: 'Open Sans', serif;
+	font-size: 16px;
+	line-height: 1.5em;
+	color: #1D4198;
+}
+
+
+p {
+	max-width: 35em;
+	margin: auto;
+}
+
+h1, h2, h3, h4, h5, h6 {
+	font-family: 'Voltaire', sans-serif;
+	letter-spacing: 0.5px;
+	color: #2656CA;
+	padding-bottom: 1em;
+}
+
+h1{
+	font-size: 2.5em;
+	color: #2656CA;
+	margin: 0.5em;
+	text-align: center;
+}
+
+h2 {
+	text-transform: uppercase;
+	text-align: center;
+	font-size: 1.5em;
+	/*margin: 1.5em;*/
+}
+
+h3 {
+	font-size: 1.2em;
+}
+
+a {
+	color: #D9EC89;
+	text-decoration: none;
+}
+
+.clearfix:after, .single_project:after {
+  visibility: hidden;
+  display: block;
+  font-size: 0;
+  content: " ";
+  clear: both;
+  height: 0;
+}
+
+button {
+    padding: 0.8em 1em;
+    background: #2656CA;
+    color: #fff;
+    display: inline-block;
+    margin-bottom: 1em;
+    font-family:'Hammersmith One', sans-serif;
+    font-size: 1em;
+    text-decoration: none;
+    text-transform: uppercase;
+    text-align: center;
+    border: 1px solid;
+    border-radius: 10px;
+}
+
+button:hover {
+    background: #D9EC89;
+    border: 1px solid #ebebeb;
+}
+section {
+	margin: 3em 0;
+}
+ svg{
+ 	margin-top: 5em;
+ }
