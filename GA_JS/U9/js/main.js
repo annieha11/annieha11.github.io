@@ -47,8 +47,8 @@ var timeFormatted = now.getHours() + ":" + now.getMinutes() + ":" + now.getSecon
 
 var dNow = new Date();
 var today = (dNow.getMonth()+ 1) + '/' + dNow.getDate() + '/' + dNow.getFullYear();
-var tomorrow = (dNow.getMonth()+ 2) + '/' + dNow.getDate() + '/' + dNow.getFullYear();
-var dayAfter = (dNow.getMonth()+ 3) + '/' + dNow.getDate() + '/' + dNow.getFullYear();
+var tomorrow = (dNow.getMonth()+ 1) + '/' + (dNow.getDate()+1) + '/' + dNow.getFullYear();
+var dayAfter = (dNow.getMonth()+ 1) + '/' + (dNow.getDate()+2) + '/' + dNow.getFullYear();
 
 var weekDay = ["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"][(new Date()).getDay()];
 
